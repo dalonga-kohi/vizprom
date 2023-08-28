@@ -1,0 +1,39 @@
+@import '../mixins';
+@import '../variables';
+
+.contact-links {
+    @include container;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0 30px;
+    background: rgb(255,210,115);
+    background: -moz-radial-gradient(circle, rgba(255,210,115,1) 0%, rgb(255, 206, 128) 100%);
+    background: -webkit-radial-gradient(circle, rgba(255,210,115,1) 0%, rgba(255, 206, 128) 100%);
+    background: radial-gradient(circle, rgba(255,210,115,1) 0%, rgba(255, 206, 128) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffd273",endColorstr="#ffbc80",GradientType=1);
+
+    article {
+        margin-top: 100px;
+        @include container;
+        flex-direction: column;
+        width: 90%;
+
+        a {
+            color: $f-color;
+        }
+        header {
+            font-weight: 400;
+            font-size: $mid-size;
+        }
+    }
+}
+@media (max-width: 800px) {
+    .contact-links {
+        article {
+            header {
+                font-size: $sm-size;
+            }
+
+        }
+    }
+}

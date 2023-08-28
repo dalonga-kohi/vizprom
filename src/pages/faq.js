@@ -1,24 +1,27 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import "../styles/_elements.scss"
 import Layout from "../layouts/Layout"
 
-const NotFoundPage = () => {
+import FAQHero from '../components/faq/FAQHero'
+import FAQAnswers from '../components/faq/FAQAnswers'
+
+const FAQPage = () => {
   return (
-    <Layout path="/proces">
-      <main><Link to="/">Go Back</Link></main>
+    <Layout path="/faq">
+      <FAQHero/>
+      <FAQAnswers/>
     </Layout>
   )
 }
 
-export default NotFoundPage
+export default FAQPage
 
 export function Head () {
   return (
     <>
     <html lang="pl"/>
-    <title>VizProm | Nie Znaleziono</title>
-    <meta name="description" content="Agencja Marketingowa Vizprom. Zajmujemy się zarządzaniem kontami w mediach społecznościowych i wykorzystujemy nowoczesne kanały przekazu aby promować twoją markę."/>
+    <title>VizProm | FAQ</title>
+    <meta name="description" content="Poznaj odpowiedzi Agencji Vizprom na najczęściej zadawane pytania."/>
     <meta name="keywords" content="Marketing Online, Agencja, Vizprom, Promocja firmy, Tworzenie Stron"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"/>

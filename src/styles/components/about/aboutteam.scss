@@ -1,0 +1,104 @@
+@import '../../variables';
+@import '../../mixins';
+
+.about-wrap {
+    @include container;
+    min-height: 80vh;
+}
+
+.about-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    width: 100%;
+    padding: 10px 40px;
+
+    p, ul {
+        margin-top: 10px;
+    }
+    ul {
+        list-style: none;
+        @include container;
+        flex-direction: column;
+    }
+    li {
+        margin-top: 5px;
+    }
+    h2 {
+        font-size: $mid-size !important;
+    }
+    &__tail {
+        @include container;
+        flex-direction: column;
+        justify-content: center;
+        background-color: $theme-color;
+        min-height: 60vh;
+        padding: 20px 25px;
+        border-radius: 10px;
+        &--big {
+            grid-area: 1 / 1 / 2 / 2;
+        }
+        &--small {
+            grid-area: 2 / 1 / 3 / 2;
+            header {
+                text-align: left;
+            }
+        }
+        &--img {
+            background-image: url('../../../images/team.jpg');
+            background-size: cover;
+            grid-area: 3 / 1 / 4 / 2;
+        }
+    }
+
+}
+@media only screen and (min-width: 800px) {
+    .about-main {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        p, ul {
+            font-size: $sm-size;
+        }
+        &__tail {
+            &--big {
+                grid-area: 1 / 1 / 2 / 2;
+            }
+            &--small {
+                grid-area: 1 / 2 / 2 / 3;
+            }
+            &--img {
+                grid-area: 2 / 1 / 3 / 3;
+            }
+        }
+    }
+}
+@media only screen and (min-width: 1200px) {
+    ul, p {
+        width: 90%;
+        font-size: $sm-size;
+    }
+    .about-main {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+
+        &__tail {
+            &--big {
+                grid-area: 1 / 1 / 2 / 3;
+                border-radius: 20px 0 0 20px;
+            }
+            &--small {
+                grid-area: 1 / 3 / 2 / 4;
+                border-radius: 0;
+            }
+            &--img {
+                grid-area: 1 / 4 / 2 / 5;
+                border-radius: 0 20px 20px 0;
+            }
+        }
+    }
+}
+
+.about-contact {
+    margin-top: 50px;
+}

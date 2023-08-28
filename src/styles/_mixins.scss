@@ -1,0 +1,14 @@
+@mixin heading-text {
+    font-size: $big-size;
+    font-weight: 700;
+    text-align: center;
+    line-height: 120%;
+    color: $f-color;
+}
+
+@mixin container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

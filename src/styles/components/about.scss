@@ -1,0 +1,50 @@
+@import '../variables';
+@import '../mixins';
+
+.about {
+    background-image: url('../../images/hands.jpg');
+    @include container;
+    height: 100vh;
+    padding: 100px 30px;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 35% center;
+    background-attachment: fixed;
+    position: relative;
+
+    p {
+        text-align: center;
+        margin: 30px 0 60px;
+        font-size: $sm-size;
+        letter-spacing: -1.5px;
+        width: 70%;
+    }
+    &__button {
+        font-size: $sm-size;
+        padding: 12px 40px;
+        text-decoration: none;
+        font-weight: 500;
+        text-align: center;
+        border-radius: 30px;
+        transition: background-color ease-in-out .4s;
+        color: $bg-color;
+        background-color: $f-color;
+
+        &:hover {
+            color: $f-color;
+            background-color: $theme-color;
+        }
+    }
+}
+
+@media (min-width: 750px) {
+    .about {
+        background-position: 20% 60%;
+
+        &__button {
+            font-size: $mid-size;
+            padding: 15px 40px;
+        }
+    }
+}

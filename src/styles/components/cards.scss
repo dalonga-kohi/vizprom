@@ -1,0 +1,42 @@
+@import '../variables';
+@import '../mixins';
+
+.cards-main-wrap {
+    padding: 100px 50px;
+    min-height: 100vh;
+}
+
+.cards-wrapper {
+    margin-top: 50px;
+    @include container;
+    display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 20px;
+    }
+.card {
+    text-align: center;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__icon {
+        font-size: $huge-size;
+        color: $theme-color;
+    }
+    header {
+        font-weight: 500;
+        font-size: $mid-size;
+        margin: 20px 0 10px;
+    }
+    p {
+        width: 80%;
+    }
+}
+
+@media (max-width: 800px) {
+    .cards-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,0 +1,22 @@
+@import '../../variables';
+@import '../../mixins';
+
+.faq-hero {
+    @include container;
+    flex-direction: column;
+    padding: 0 60px 100px;
+    height: auto;
+    min-height: 100vh;
+    max-height: 150vh;
+    h1 {
+        margin: 100px 0 50px;
+        text-decoration: underline $theme-color 10px;
+    }
+}
+@media (max-width: 730px) {
+    .faq-hero {
+        h1 {
+            text-decoration: underline $theme-color 5px;
+        }
+    }
+}

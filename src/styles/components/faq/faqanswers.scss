@@ -1,0 +1,56 @@
+@import '../../variables';
+@import '../../mixins';
+
+.main-faq {
+    @include container;
+    flex-direction: column;
+    background-color: $theme-color;
+    padding: 30px 50px 100px;
+    justify-content: flex-start;
+    &__item {
+        margin-top: 80px;
+        width: 90%;
+        &:hover {cursor: pointer;}
+
+        &__answer {
+            display: none;
+            margin-top: 10px;
+            font-size: $sm-size;
+            width: 80%;
+        }
+        &__question {
+            @include container;
+            justify-content: space-between;
+            text-transform: capitalize;
+        }
+        &__arrow {
+            margin-left: 10px;
+            transform: rotate(0deg);
+            font-size: $sm-size;
+            display: block;
+            transition: transform .3s linear;
+        }
+
+        &--active &__arrow{
+            transform: rotate(90deg);
+        }
+
+        &--active &__answer {
+            display: block;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .main-faq {
+        padding: 30px 25px 80px;
+        &__item {
+            width: 100%;
+
+            &__answer {
+                font-size: $little-size;
+                font-weight: 500;
+            }
+        }
+    }
+}

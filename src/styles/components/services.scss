@@ -1,0 +1,43 @@
+@import '../variables';
+@import '../mixins';
+
+.services {
+    @include container;
+    flex-direction: column;
+    h1 {
+        margin: 50px 0;
+    }
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: $mid-size;
+        width: 75%;
+        border-top: $theme-color 5px solid;
+        padding: 20px 0;
+        padding-right: 30px;
+        &:last-child {
+            border-bottom: $theme-color 5px solid;
+            margin-bottom: 40px;
+        }
+
+        header {
+            width: 70%;
+            text-align: left;
+            font-weight: 500;
+            font-size: $mid-size;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .services {
+        &__item {
+        width: 85%;
+            header {
+                font-size: $sm-size;
+                width: 75%;
+            }
+        }
+    }
+}

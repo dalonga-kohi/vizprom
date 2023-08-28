@@ -1,0 +1,25 @@
+@import '../variables';
+@import '../mixins';
+
+.hero {
+    @include container;
+    height: 100vh;
+    flex-direction: column;
+    padding: 0px 50px;
+    background-image: url('../../images/bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    & p {
+        margin: 30px 0 60px;
+        text-align: center;
+        font-size: $little-size;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero {
+        background-position: top 20%;
+        background-size: 300%;
+    }
+}
