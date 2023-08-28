@@ -1,5 +1,5 @@
 # Viprom Site
-link to site: (vizprom.pl)[https://vizprom.pl]
+link to site: [vizprom.pl](https://vizprom.pl)
 
 ## Run locally
 1. Clone repository
